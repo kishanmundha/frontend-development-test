@@ -1,113 +1,179 @@
-import Image from 'next/image'
+'use client';
+import { Accordion, Card, Header, Marquee } from './components';
+import Image from 'next/image';
+import {
+  CpuChip,
+  Image1,
+  Image2,
+  Users,
+  Cube,
+  Disk,
+  Percentage,
+  Target,
+  About,
+  Laugh_Man,
+} from '../assets';
+import { FC } from 'react';
+import { accordionData } from './const';
+
+const Section1: FC = () => (
+  <div className="flex flex-col sm:gap-10 gap-5 pt-16 md:pt-32 pb-20 md:pb-44">
+    <div className="text-10 text-4xl sm:text-9xl font-bold uppercase">
+      lorem ipsum
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      <div>
+        <Card
+          title="dolor sit"
+          description="Lorem ipsum dolor sit amet consectetur. In nibh nam vel
+          lacus sit. Neque venenatis mattis est nibh sed quis vel quis
+          eu. In tincidunt faucibus aliquet quis sed sed. Phasellus
+          non at lacus convallis elementum. Suspendisse tincidunt
+          congue sem turpis. Nulla eu lorem cras leo."
+          iconUrl={Users}
+        />
+      </div>
+      <div>
+        <Card
+          title="Lorem ipsum dolor sit"
+          description="Dolor adipiscing condimentum aliquam nullam mauris ante ipsum vel nisl. Dignissim molestie amet purus felis egestas amet eget. Viverra malesuada ultricies nunc vel diam posuere mauris sociis maecenas. Aenean dui et nec ultrices libero lacus."
+          iconUrl={Disk}
+        />
+      </div>
+      <div>
+        <Image src={Image1} alt="image" className="mb-10" />
+        <Card
+          title="dolor sit"
+          description="Dolor adipiscing condimentum aliquam nullam mauris ante ipsum vel nisl. Dignissim molestie amet purus felis egestas amet eget. Viverra malesuada ultricies nunc vel diam posuere mauris sociis maecenas. Aenean dui et nec ultrices libero lacus."
+          iconUrl={Target}
+        />
+      </div>
+      <div>
+        <Card
+          title="Lorem ipsum"
+          description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+          iconUrl={Percentage}
+        />
+      </div>
+      <div>
+        <Card
+          title="dolor sit amet"
+          description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+          iconUrl={CpuChip}
+        />
+      </div>
+      <div />
+      <div />
+      <div className="flex">
+        <Image src={Image2} alt="image" />
+      </div>
+      <div>
+        <Card
+          title="Lorem ipsum dolor"
+          description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+          iconUrl={Cube}
+        />
+      </div>
+    </div>
+  </div>
+);
+
+const Section2: FC = () => (
+  <div className="relative pt-32 md:pt-48 pb-32 md:pb-64">
+    <div className="grid md:grid-cols-2 gap-16">
+      <div className="relative">
+        <div className="text-xl sm:text-9xl font-bold uppercase">About</div>
+        <div className="text-xl sm:text-9xl font-bold uppercase">us</div>
+        <div className="flex flex-col items-start gap-4">
+          <div className="text-lg opacity-70 font-normal">Lorem</div>
+          <div className="text-lg opacity-70 font-normal">Lorem</div>
+        </div>
+        <Image
+          src={About}
+          alt="about us"
+          className="rounded-full absolute top-28 right-8 hidden md:block"
+        />
+      </div>
+      <div className="text-lg	font-normal opacity-70 md:mt-28">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </div>
+    </div>
+  </div>
+);
+
+const Section3: FC = () => (
+  <div className="flex flex-col sm:gap-10 gap-5 pt-16 md:pt-32 pb-20 md:pb-44">
+    <div className="text-10 sm:text-9xl font-bold uppercase">
+      lorem ipsum dolor set
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      <div>
+        <Card
+          title="Lorem ipsum"
+          description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+          iconUrl={Percentage}
+        />
+      </div>
+      <div>
+        <Card
+          title="dolor sit amet"
+          description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+          iconUrl={CpuChip}
+        />
+      </div>
+      <div></div>
+      <div></div>
+      <div className="flex">
+        <Image src={Laugh_Man} alt="laugh man" />
+      </div>
+      <div>
+        <Card
+          title="Lorem ipsum dolor"
+          description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+          iconUrl={Cube}
+        />
+      </div>
+    </div>
+  </div>
+);
+
+const Section4: FC = () => (
+  <div className="flex items-center justify-center w-full pt-20 pb-20 md:pt-40 md:pb-64">
+    <div className="flex flex-col items-start sm:gap-8 gap-16">
+      <div className="text-4xl sm:text-9xl font-bold uppercase">
+        lorem ipsum dolor
+      </div>
+      <div className="flex flex-col w-full">
+        {accordionData.map((item, index) => (
+          <Accordion title={item.title} content={item.content} key={index} />
+        ))}
+      </div>
+    </div>
+  </div>
+);
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div>
+      <div className="flex flex-col max-w-screen-xl mx-auto px-2">
+        <Section1 />
+        <Section2 />
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="py-10">
+        <Marquee />
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="flex flex-col max-w-screen-xl mx-auto px-2">
+        <Section3 />
+        <Section4 />
       </div>
-    </main>
-  )
+    </div>
+  );
 }
